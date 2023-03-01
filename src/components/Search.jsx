@@ -32,7 +32,6 @@ const Search = () => {
     country = await GetCountry(name);
     gender = await GetGender(name);
     setVal({ age: age, country: country, gender: gender });
-    console.log(val.country);
     setisLoading(false);
   };
   return isLoading ? (
@@ -67,7 +66,7 @@ const Search = () => {
           Get Result
         </button>
       </div>
-      {val?.age?.age && val?.gender?.gender && (
+      {val?.age?.age && val?.gender?.gender && val?.country?.country && (
         <div className="flex flex-col justify-center items-center mt-3">
           <div className="grid grid-cols-4 gap-10">
             <div className="">
